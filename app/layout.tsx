@@ -13,10 +13,11 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#090e17",
+  themeColor: "#DC2626",
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://logimax.uz'),
   title: "Logimax.uz — Xalqaro va Amerika Logistikasi Kurslari",
   description:
     "Logimax logistika akademiyasida Xalqaro va Amerika logistikasini nazariya va real amaliyot asosida o‘rganing. Standard va Express kurslar.",
@@ -30,12 +31,17 @@ export const metadata: Metadata = {
     "logimax uz"
   ],
   authors: [{ name: "Logimax Logistika Akademiyasi" }],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Logimax.uz — Xalqaro va Amerika Logistikasi Kurslari",
     description:
       "Logimax logistika akademiyasida Xalqaro va Amerika logistikasini nazariya va real amaliyot asosida o‘rganing. Standard va Express kurslar.",
     url: "https://logimax.uz",
     siteName: "Logimax Logistika Akademiyasi",
+    images: [{ url: "/logo.png", width: 1200, height: 1200, alt: "Logimax Logo" }],
     locale: "uz_UZ",
     type: "website",
   },
@@ -44,6 +50,7 @@ export const metadata: Metadata = {
     title: "Logimax.uz — Xalqaro va Amerika Logistikasi Kurslari",
     description:
       "Logimax logistika akademiyasida Xalqaro va Amerika logistikasini nazariya va real amaliyot asosida o‘rganing.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -58,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz" className={`${plusJakarta.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-[#090E17] text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+      <body className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900 antialiased selection:bg-red-600 selection:text-white">
         {children}
       </body>
     </html>

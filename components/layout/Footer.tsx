@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Compass, Phone, Send, MapPin, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Send, MapPin, ArrowUpRight } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,14 +11,20 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand */}
           <div className="md:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-3 group focus-visible:outline-none">
-              <div className="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                <Compass className="w-5 h-5" />
+              <div className="relative w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-sm">
+                <Image
+                  src="/logo.png"
+                  alt="Logimax Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-white">
+                <span className="text-xl font-black tracking-tight text-white">
                   LOGIMAX
                 </span>
-                <span className="text-[10px] font-semibold tracking-wider uppercase text-blue-400 -mt-0.5">
+                <span className="text-[10px] font-bold tracking-wider uppercase text-red-500 -mt-0.5">
                   Logistika Akademiyasi
                 </span>
               </div>
@@ -34,27 +41,27 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="#kurslar" className="hover:text-white transition-colors">
+                <a href="#kurslar" className="hover:text-red-400 transition-colors">
                   Kurslar
                 </a>
               </li>
               <li>
-                <a href="#natijalar" className="hover:text-white transition-colors">
+                <a href="#natijalar" className="hover:text-red-400 transition-colors">
                   O‘quvchilar natijalari
                 </a>
               </li>
               <li>
-                <a href="#biz-haqimizda" className="hover:text-white transition-colors">
+                <a href="#biz-haqimizda" className="hover:text-red-400 transition-colors">
                   Biz haqimizda
                 </a>
               </li>
               <li>
-                <a href="#hamkorlar" className="hover:text-white transition-colors">
+                <a href="#hamkorlar" className="hover:text-red-400 transition-colors">
                   Hamkorlar
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-white transition-colors">
+                <a href="#faq" className="hover:text-red-400 transition-colors">
                   Ko‘p beriladigan savollar
                 </a>
               </li>
@@ -68,13 +75,13 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="#xalqaro-logistika" className="hover:text-white transition-colors flex items-center gap-1">
+                <a href="#xalqaro-logistika" className="hover:text-red-400 transition-colors flex items-center gap-1">
                   <span>Xalqaro Logistika</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
                 </a>
               </li>
               <li>
-                <a href="#amerika-logistikasi" className="hover:text-white transition-colors flex items-center gap-1">
+                <a href="#amerika-logistikasi" className="hover:text-red-400 transition-colors flex items-center gap-1">
                   <span>Amerika Logistikasi</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
                 </a>
@@ -95,11 +102,11 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li className="flex items-center gap-2 text-slate-300">
-                <Phone className="w-4 h-4 text-blue-400 shrink-0" />
+                <Phone className="w-4 h-4 text-red-400 shrink-0" />
                 <span>+998 XX XXX XX XX</span>
               </li>
               <li className="flex items-center gap-2 text-slate-300">
-                <Send className="w-4 h-4 text-sky-400 shrink-0" />
+                <Send className="w-4 h-4 text-red-400 shrink-0" />
                 <a
                   href="https://t.me/logimax"
                   target="_blank"

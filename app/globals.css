@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090e17;
-  --foreground: #f1f5f9;
-  --surface: #0f172a;
-  --surface-border: #1e293b;
-  --accent-blue: #2563eb;
-  --accent-cyan: #0284c7;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-border: #e2e8f0;
+  --accent-red: #dc2626;
+  --accent-red-hover: #b91c1c;
+  --accent-rose: #e11d48;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -23,35 +24,35 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle grid texture for logistics tech mood */
+/* Subtle grid texture tailored for light logistics aesthetic */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
 }
 
 .bg-radial-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, rgba(9, 14, 23, 0) 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
 }
 
 /* Focus outline for accessibility */
 *:focus-visible {
-  outline: 2px solid #38bdf8;
+  outline: 2px solid #dc2626;
   outline-offset: 2px;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090e17;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #94a3b8;
 }

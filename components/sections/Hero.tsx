@@ -20,50 +20,50 @@ export const Hero: React.FC = () => {
           {/* Left Column: Value Proposition & CTAs */}
           <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left">
             {/* Academy Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs sm:text-sm font-semibold">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs sm:text-sm font-bold shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
               <span>LOGIMAX LOGISTIKA AKADEMIYASI</span>
             </div>
 
             {/* Main Headline (H1 for SEO) */}
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl/tight font-extrabold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl/tight font-black text-slate-900 tracking-tight">
               LOGISTIKANI 0 DAN O‘RGANING{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-600 to-red-700">
                 VA REAL AMALIYOT
               </span>{' '}
               BILAN ISH BOSHLANG
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
               Logimax logistika akademiyasida Xalqaro logistika yoki Amerika logistikasini nazariya bilan cheklanib qolmasdan, real amaliyot asosida o‘rganing.
             </p>
 
             {/* 3 Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <div className="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-slate-200">
+                <span className="text-xs sm:text-sm font-semibold text-slate-800">
                   Xalqaro va Amerika logistikasi
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <div className="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-slate-200">
+                <span className="text-xs sm:text-sm font-semibold text-slate-800">
                   Nazariya + real amaliyot
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <div className="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-slate-200">
+                <span className="text-xs sm:text-sm font-semibold text-slate-800">
                   0 dan boshlab o‘rgatiladi
                 </span>
               </div>
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
                 variant="primary"
                 size="lg"
                 onClick={() => scrollToSection('kurslar')}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 text-base font-bold shadow-xl shadow-blue-600/30"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 text-base font-bold shadow-xl shadow-red-600/25"
               >
                 <span>Kursni tanlash</span>
                 <ArrowRight className="w-4 h-4" />
@@ -85,67 +85,67 @@ export const Hero: React.FC = () => {
                 variant="secondary"
                 size="lg"
                 onClick={() => scrollToSection('ariza')}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 text-base"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 text-base font-bold hover:border-red-400 hover:text-red-600"
               >
-                <PhoneCall className="w-4 h-4 text-blue-400" />
+                <PhoneCall className="w-4 h-4 text-red-600" />
                 <span>Bepul konsultatsiya olish</span>
               </Button>
             </div>
           </div>
 
-          {/* Right Column: High-tech Logistics Telemetry & Dispatch UI Visual */}
+          {/* Right Column: Logistics Telemetry & Dispatch UI Visual (Light Red Theme) */}
           <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl p-6 bg-gradient-to-b from-slate-900/90 via-[#0B1220]/90 to-slate-950 border border-slate-800/90 shadow-2xl shadow-blue-950/40 backdrop-blur-xl">
+            <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl p-6 bg-white border border-slate-200/90 shadow-2xl shadow-slate-300/40">
               
               {/* Header Bar */}
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800/80 mb-5">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
                 <div className="flex items-center gap-2.5">
                   <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs font-semibold text-slate-200 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
                     Logimax Dispatch Simulator
                   </span>
                 </div>
-                <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 font-mono">
+                <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-red-50 border border-red-200 text-red-700 font-mono font-bold">
                   LIVE WORKSPACE
                 </span>
               </div>
 
               {/* Live Route Graphic */}
-              <div className="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/60 mb-5">
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
-                  <span className="flex items-center gap-1.5 text-blue-400 font-semibold">
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-5">
+                <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
+                  <span className="flex items-center gap-1.5 text-red-600 font-bold">
                     <Globe2 className="w-3.5 h-3.5" />
                     Marshrut monitoringi
                   </span>
-                  <span className="text-emerald-400 font-mono text-[11px]">Holat: Faol</span>
+                  <span className="text-emerald-600 font-mono text-[11px] font-bold">Holat: Faol</span>
                 </div>
 
                 {/* Visual Route Points */}
                 <div className="relative py-2">
                   <div className="flex items-center justify-between relative z-10">
                     <div className="flex flex-col items-center">
-                      <div className="w-7 h-7 rounded-full bg-blue-600/30 border border-blue-400 text-white flex items-center justify-center text-xs font-bold shadow-lg shadow-blue-600/40">
+                      <div className="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center text-xs font-bold shadow-md shadow-red-600/30">
                         A
                       </div>
-                      <span className="text-[11px] font-medium text-slate-300 mt-1">Toshkent</span>
+                      <span className="text-[11px] font-bold text-slate-800 mt-1">Toshkent</span>
                       <span className="text-[10px] text-slate-500">Yuk ortish</span>
                     </div>
 
                     <div className="flex-1 mx-3 relative flex items-center">
-                      <div className="w-full h-0.5 bg-slate-800" />
+                      <div className="w-full h-0.5 bg-slate-300" />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="px-2.5 py-1 rounded-full bg-blue-950 border border-blue-500/40 text-[10px] font-mono text-blue-300 flex items-center gap-1">
-                          <Truck className="w-3 h-3 text-blue-400" />
+                        <div className="px-2.5 py-1 rounded-full bg-white border border-red-300 text-[10px] font-mono text-red-700 font-bold flex items-center gap-1 shadow-xs">
+                          <Truck className="w-3 h-3 text-red-600" />
                           <span>CMR / TIR</span>
                         </div>
                       </div>
                     </div>
 
                     <div className="flex flex-col items-center">
-                      <div className="w-7 h-7 rounded-full bg-emerald-600/30 border border-emerald-400 text-white flex items-center justify-center text-xs font-bold shadow-lg shadow-emerald-600/40">
+                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shadow-md">
                         B
                       </div>
-                      <span className="text-[11px] font-medium text-slate-300 mt-1">Yevropa / AQSH</span>
+                      <span className="text-[11px] font-bold text-slate-800 mt-1">Yevropa / AQSH</span>
                       <span className="text-[10px] text-slate-500">Yetkazish</span>
                     </div>
                   </div>
@@ -154,33 +154,33 @@ export const Hero: React.FC = () => {
 
               {/* Department Indicators Grid */}
               <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                    <span>Dispatching</span>
-                    <Activity className="w-3 h-3 text-blue-400" />
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                    <span className="font-semibold">Dispatching</span>
+                    <Activity className="w-3 h-3 text-red-600" />
                   </div>
-                  <div className="text-sm font-bold text-white">DAT & Truckstop</div>
-                  <div className="text-[10px] text-slate-400 mt-0.5">Brokerlar bilan muzokara</div>
+                  <div className="text-sm font-bold text-slate-900">DAT & Truckstop</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">Brokerlar bilan muzokara</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                    <span>Safety & DOT</span>
-                    <ShieldCheck className="w-3 h-3 text-emerald-400" />
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                    <span className="font-semibold">Safety & DOT</span>
+                    <ShieldCheck className="w-3 h-3 text-emerald-600" />
                   </div>
-                  <div className="text-sm font-bold text-white">FMCSA Qoidalari</div>
-                  <div className="text-[10px] text-slate-400 mt-0.5">Nazorat protokollari</div>
+                  <div className="text-sm font-bold text-slate-900">FMCSA Qoidalari</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">Nazorat protokollari</div>
                 </div>
               </div>
 
               {/* Practice Desktop Callout */}
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-blue-950/40 border border-blue-500/30">
-                <div className="w-8 h-8 rounded-lg bg-blue-600/30 border border-blue-400/40 flex items-center justify-center text-blue-300 shrink-0">
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-red-50 border border-red-200">
+                <div className="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-red-600/25">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="text-xs">
-                  <p className="font-semibold text-slate-200">Shaxsiy amaliy ish stoli</p>
-                  <p className="text-slate-400 text-[11px]">Real platformalar va yuk botlari taqdim etiladi</p>
+                  <p className="font-bold text-slate-900">Shaxsiy amaliy ish stoli</p>
+                  <p className="text-slate-600 text-[11px]">Real platformalar va yuk botlari taqdim etiladi</p>
                 </div>
               </div>
 
@@ -190,20 +190,20 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Trust Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80">
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-400">
-            <span className="flex items-center gap-2 text-slate-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+        <div className="mt-12 pt-8 border-t border-slate-200">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-600">
+            <span className="flex items-center gap-2 text-slate-900">
+              <span className="w-2 h-2 rounded-full bg-red-600" />
               Xalqaro logistika
             </span>
-            <span className="text-slate-600">•</span>
-            <span className="flex items-center gap-2 text-slate-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+            <span className="text-slate-300">•</span>
+            <span className="flex items-center gap-2 text-slate-900">
+              <span className="w-2 h-2 rounded-full bg-slate-800" />
               Amerika logistikasi
             </span>
-            <span className="text-slate-600">•</span>
-            <span className="flex items-center gap-2 text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span className="text-slate-300">•</span>
+            <span className="flex items-center gap-2 text-red-600 font-extrabold">
+              <span className="w-2 h-2 rounded-full bg-red-600" />
               Real amaliyot
             </span>
           </div>

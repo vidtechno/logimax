@@ -42,18 +42,18 @@ export const WhyLogimax: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#090E17] border-t border-slate-900 relative">
+    <section className="py-16 sm:py-24 bg-white border-t border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-xs font-semibold text-blue-400">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-xs font-bold text-red-600">
             USTUNLIKLAR
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
             Nega Logimax?
           </h2>
-          <p className="text-sm sm:text-base text-slate-300">
+          <p className="text-sm sm:text-base text-slate-600">
             O‘quvchilarimizga zamonaviy bilim, qulay dars jadvallari va professional amaliyot muhitini taqdim etamiz.
           </p>
         </div>
@@ -65,23 +65,23 @@ export const WhyLogimax: React.FC = () => {
             return (
               <div
                 key={item.num}
-                className="relative rounded-2xl p-6 sm:p-7 bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/40 transition-all duration-300 group flex flex-col justify-between"
+                className="relative rounded-2xl p-6 sm:p-7 bg-slate-50/70 border border-slate-200 hover:border-red-300 hover:bg-white hover:shadow-md transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <span className="text-xs font-mono font-bold text-blue-400 px-2.5 py-1 rounded-lg bg-blue-950/60 border border-blue-500/30">
+                    <span className="text-xs font-mono font-bold text-red-700 px-2.5 py-1 rounded-lg bg-red-100 border border-red-200">
                       {item.num}
                     </span>
-                    <div className="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 text-slate-300 group-hover:text-blue-400 transition-colors">
+                    <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 group-hover:text-red-600 group-hover:border-red-200 transition-colors shadow-xs">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2.5">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2.5">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

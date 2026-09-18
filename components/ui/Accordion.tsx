@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
 interface AccordionItemProps {
@@ -22,19 +22,27 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   const buttonId = `faq-button-${index}`;
 
   return (
-    <div className="border border-slate-800/80 hover:border-slate-700/90 rounded-2xl bg-slate-900/40 backdrop-blur-sm transition-colors duration-200 overflow-hidden">
+    <div
+      className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+        isOpen
+          ? 'bg-white border-red-400 shadow-md shadow-red-500/5'
+          : 'bg-white border-slate-200/90 hover:border-slate-300 shadow-xs'
+      }`}
+    >
       <h3>
         <button
           id={buttonId}
           aria-expanded={isOpen}
           aria-controls={contentId}
           onClick={onToggle}
-          className="w-full flex items-center justify-between p-5 md:p-6 text-left text-slate-100 hover:text-white font-medium text-base md:text-lg transition-colors group focus-visible:outline-none"
+          className="w-full flex items-center justify-between p-5 md:p-6 text-left text-slate-900 hover:text-red-600 font-bold text-base md:text-lg transition-colors group focus-visible:outline-none"
         >
           <span className="pr-4 leading-snug">{question}</span>
           <span
-            className={`shrink-0 w-8 h-8 rounded-full bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-slate-400 group-hover:text-blue-400 transition-transform duration-300 ${
-              isOpen ? 'rotate-180 bg-blue-600/10 text-blue-400 border-blue-500/30' : ''
+            className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+              isOpen
+                ? 'rotate-180 bg-red-600 text-white shadow-sm shadow-red-600/30'
+                : 'bg-slate-100 text-slate-500 group-hover:bg-red-50 group-hover:text-red-600'
             }`}
           >
             <ChevronDown className="w-4 h-4" />
@@ -50,7 +58,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-5 pb-6 md:px-6 md:pb-6 text-slate-400 text-sm md:text-base leading-relaxed border-t border-slate-800/40 pt-4">
+          <p className="px-5 pb-6 md:px-6 md:pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 pt-4">
             {answer}
           </p>
         </div>

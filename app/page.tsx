@@ -17,7 +17,7 @@ import { MobileStickyCTA } from '@/components/layout/MobileStickyCTA';
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#090E17] text-slate-100 selection:bg-blue-600 selection:text-white">
+    <div className="relative min-h-screen flex flex-col bg-[#F8FAFC] text-slate-900 selection:bg-red-600 selection:text-white">
       {/* Sticky Header */}
       <Header />
 

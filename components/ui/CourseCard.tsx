@@ -32,8 +32,8 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelectCourse }
     <div
       className={`relative flex flex-col justify-between rounded-3xl p-6 sm:p-8 transition-all duration-300 ${
         isExpress
-          ? 'bg-gradient-to-b from-blue-950/40 via-slate-900/90 to-slate-950 border-2 border-blue-500/50 shadow-2xl shadow-blue-900/20 hover:border-blue-400'
-          : 'bg-slate-900/60 backdrop-blur-md border border-slate-800/90 hover:border-slate-700 shadow-xl shadow-slate-950/50'
+          ? 'bg-gradient-to-b from-red-50/50 via-white to-white border-2 border-red-500 shadow-xl shadow-red-500/10 hover:border-red-600'
+          : 'bg-white border border-slate-200 shadow-md shadow-slate-100 hover:border-slate-300 hover:shadow-lg'
       }`}
     >
       {/* Top Header */}
@@ -42,13 +42,13 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelectCourse }
           <span
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
               isExpress
-                ? 'bg-amber-500/15 text-amber-300 border border-amber-500/30'
-                : 'bg-blue-500/15 text-blue-300 border border-blue-500/30'
+                ? 'bg-red-100 text-red-700 border border-red-200'
+                : 'bg-slate-100 text-slate-700 border border-slate-200'
             }`}
           >
             {isExpress ? (
               <>
-                <Zap className="w-3.5 h-3.5" />
+                <Zap className="w-3.5 h-3.5 fill-red-600 text-red-600" />
                 {course.badge || 'INTENSIV'}
               </>
             ) : (
@@ -56,41 +56,41 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelectCourse }
             )}
           </span>
 
-          <span className="text-xs text-slate-400 font-medium flex items-center gap-1">
+          <span className="text-xs text-slate-500 font-semibold flex items-center gap-1">
             <Clock className="w-3.5 h-3.5 text-slate-400" />
             {course.duration}
           </span>
         </div>
 
-        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+        <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-3">
           {course.title}
         </h3>
 
         {/* Schedule & Timing Info */}
-        <div className="flex flex-wrap gap-2.5 mb-6 text-xs text-slate-300">
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60">
-            <Calendar className="w-3.5 h-3.5 text-blue-400" />
-            <span>{course.schedule}</span>
+        <div className="flex flex-wrap gap-2.5 mb-6 text-xs text-slate-700">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200/80">
+            <Calendar className="w-3.5 h-3.5 text-red-600" />
+            <span className="font-medium">{course.schedule}</span>
           </div>
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60">
-            <Clock className="w-3.5 h-3.5 text-blue-400" />
-            <span>Davomiyligi: {course.duration}</span>
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200/80">
+            <Clock className="w-3.5 h-3.5 text-red-600" />
+            <span className="font-medium">Davomiyligi: {course.duration}</span>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px w-full bg-slate-800 mb-6" />
+        <div className="h-px w-full bg-slate-200 mb-6" />
 
         {/* Theory Block */}
         <div className="mb-6">
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-slate-500" />
             {course.theoryDuration}
           </h4>
           <ul className="space-y-2">
             {course.theoryTopics.map((topic, i) => (
-              <li key={i} className="flex items-start gap-2.5 text-sm text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+              <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
+                <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
                 <span>{topic}</span>
               </li>
             ))}
@@ -99,14 +99,14 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelectCourse }
 
         {/* Practice Block */}
         <div className="mb-8">
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+          <h4 className="text-xs font-bold uppercase tracking-wider text-red-600 mb-3 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-red-600" />
             {course.practiceDuration}
           </h4>
           <ul className="space-y-2">
             {course.practicePoints.map((point, i) => (
-              <li key={i} className="flex items-start gap-2.5 text-sm text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+              <li key={i} className="flex items-start gap-2.5 text-sm font-medium text-slate-800">
+                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                 <span>{point}</span>
               </li>
             ))}
@@ -115,12 +115,14 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelectCourse }
       </div>
 
       {/* Action Button */}
-      <div className="pt-4 border-t border-slate-800/80">
+      <div className="pt-4 border-t border-slate-200">
         <Button
           variant={isExpress ? 'primary' : 'secondary'}
           size="lg"
           onClick={handleApply}
-          className="w-full flex items-center justify-center gap-2 group"
+          className={`w-full flex items-center justify-center gap-2 group font-bold ${
+            !isExpress ? 'hover:border-red-500 hover:text-red-600' : ''
+          }`}
         >
           <span>{course.ctaText}</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
