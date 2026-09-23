@@ -38,17 +38,23 @@ export interface StudentResult {
   name: string;
   courseName: string;
   achievement: string;
-  testimonial: string;
-  avatarPlaceholder: string;
+  testimonial?: string;
+  avatarPlaceholder?: string;
   statusBadge: string;
   isPlaceholderNote?: string;
+  image?: string;
+  age?: number;
+  company?: string;
+  metric?: string;
+  direction?: 'xalqaro' | 'amerika' | 'umumiy';
 }
 
 export interface PartnerCompany {
   id: string;
   name: string;
-  country: string;
+  country?: string;
   type: string;
+  description?: string;
 }
 
 export interface FAQItem {

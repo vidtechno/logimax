@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Phone, Send } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 export const Header: React.FC = () => {
@@ -94,8 +94,24 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Header Action Button */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Header Action Buttons */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="tel:+998915471025"
+              className="flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-red-600 transition-colors py-1.5 px-3 rounded-full hover:bg-slate-100"
+            >
+              <Phone className="w-3.5 h-3.5 text-red-600" />
+              <span>+998 (91) 547-10-25</span>
+            </a>
+            <a
+              href="https://t.me/logimax12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+              title="Telegram kanalimiz"
+            >
+              <Send className="w-4 h-4" />
+            </a>
             <Button
               variant="primary"
               size="md"
@@ -104,6 +120,18 @@ export const Header: React.FC = () => {
             >
               <span>Kursga yozilish</span>
               <ArrowUpRight className="w-4 h-4" />
+            </Button>
+          </div>
+
+          <div className="hidden md:flex lg:hidden items-center gap-2">
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={handleCtaClick}
+              className="gap-1 font-bold shadow-md shadow-red-600/20"
+            >
+              <span>Kursga yozilish</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </Button>
           </div>
 
@@ -135,7 +163,28 @@ export const Header: React.FC = () => {
                 {link.label}
               </a>
             ))}
-            <div className="pt-4">
+
+            {/* Mobile Contact Quick Actions */}
+            <div className="pt-3 pb-2 space-y-2 border-b border-slate-100">
+              <a
+                href="tel:+998915471025"
+                className="flex items-center gap-2.5 py-1.5 text-sm font-bold text-slate-800"
+              >
+                <Phone className="w-4 h-4 text-red-600" />
+                <span>+998 (91) 547-10-25</span>
+              </a>
+              <a
+                href="https://t.me/logimax12"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 py-1.5 text-sm font-bold text-sky-600"
+              >
+                <Send className="w-4 h-4" />
+                <span>@logimax12 (Telegram kanal)</span>
+              </a>
+            </div>
+
+            <div className="pt-2">
               <Button
                 variant="primary"
                 size="lg"

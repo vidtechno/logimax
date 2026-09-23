@@ -103,17 +103,32 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li className="flex items-center gap-2 text-slate-300">
                 <Phone className="w-4 h-4 text-red-400 shrink-0" />
-                <span>+998 XX XXX XX XX</span>
+                <a href="tel:+998915471025" className="hover:text-white transition-colors">
+                  +998 (91) 547-10-25
+                </a>
               </li>
               <li className="flex items-center gap-2 text-slate-300">
-                <Send className="w-4 h-4 text-red-400 shrink-0" />
+                <Phone className="w-4 h-4 text-red-400 shrink-0" />
+                <a href="tel:+998776402530" className="hover:text-white transition-colors">
+                  +998 (77) 640-25-30
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-slate-300">
+                <Phone className="w-4 h-4 text-red-400 shrink-0" />
+                <a href="tel:+998935991126" className="hover:text-white transition-colors">
+                  +998 (93) 599-11-26
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-slate-300">
+                <Send className="w-4 h-4 text-sky-400 shrink-0" />
                 <a
-                  href="https://t.me/logimax"
+                  href="https://t.me/logimax12"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors flex items-center gap-1 text-sky-400 hover:underline"
                 >
-                  @logimax
+                  <span>@logimax12</span>
+                  <span className="text-[11px] text-slate-500 font-normal">(Telegram kanalimiz)</span>
                 </a>
               </li>
               <li className="flex items-center gap-2 text-slate-300">
@@ -138,10 +153,6 @@ export const Footer: React.FC = () => {
                 >
                   @logimax.uz
                 </a>
-              </li>
-              <li className="flex items-start gap-2 text-slate-400 text-xs">
-                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span>Manzil keyinchalik kiritiladi.</span>
               </li>
             </ul>
           </div>
