@@ -69,28 +69,28 @@ export const internationalCourses: CourseDetail[] = [
 
 export const americanDepartments: DepartmentInfo[] = [
   {
+    id: 'dispatching',
+    title: 'Dispatching',
+    description: 'Online yuk bozoriga kirib, yukni tahlil qilish, truck va treylerga yaxshi narxda yuk berish va uni A dan B gacha kuzatish.',
+    iconName: 'Headphones'
+  },
+  {
     id: 'fleet-management',
     title: 'Fleet Management',
-    description: 'Transportlar, haydovchilar va fleet jarayonlarini boshqarish, texnik holat va yo‘l monitoringi.',
+    description: 'Truck va treyler turi bilan tanishib ishlash, driver bilan ishlash tartibi, texnik nosozlikni bartaraf etish.',
     iconName: 'Truck'
   },
   {
     id: 'safety',
     title: 'Safety',
-    description: 'Haydovchi va kompaniyaning safety jarayonlari, DOT/FMCSA talablarini to‘liq nazorat qilish.',
+    description: 'DOT / FMCSA / DMV tashkilotlari bilan ishlash tartibi: Kompaniya va driverni yo‘l qoidalari va hujjati bo‘yicha xavfsizligini ta’minlash.',
     iconName: 'ShieldCheck'
   },
   {
     id: 'accounting',
     title: 'Accounting',
-    description: 'Logistika kompaniyasidagi moliyaviy operatsiyalar, faktoring, invoyslar va to‘lovlar nazorati.',
+    description: 'Kompaniyadagi barcha moliyaviy jarayonni boshqarish. Hujjatlar bilan ishlash: Invoys, Rate confirmation, BOL, POD, Statement, Factoring ..... standard.',
     iconName: 'Calculator'
-  },
-  {
-    id: 'dispatching',
-    title: 'Dispatching',
-    description: 'Truck uchun yuk topish, brokerlar bilan muzokaralar va yuk harakatini bevosita boshqarish.',
-    iconName: 'Headphones'
   }
 ];
 
@@ -104,10 +104,10 @@ export const americanCourses: CourseDetail[] = [
     schedule: 'Haftada 3 kun',
     theoryDuration: '1 oy — Nazariya (4 ta department)',
     theoryTopics: [
-      'Dispatching: Load boardlar (DAT, Truckstop), brokerlar bilan muzokaralar',
-      'Fleet Management: Haydovchilar bilan aloqa, ELD tizimi va yo‘nalishlar',
-      'Safety: FMCSA qoidalari, audit va xavfsizlik protokollari',
-      'Accounting: Invoyslar, Rate Confirmation, faktoring va hisob-kitoblar'
+      'Dispatching: Online yuk bozoriga kirib, yukni tahlil qilish, truck/treylerga yuk berish va A dan B gacha kuzatish',
+      'Fleet Management: Truck va treyler turlari, driver bilan ishlash va texnik nosozlikni bartaraf etish',
+      'Safety: DOT / FMCSA / DMV tashkilotlari bilan ishlash va yo‘l xavfsizligi hujjatlari',
+      'Accounting: Invoys, Rate confirmation, BOL, POD, Statement, Factoring hamda moliyaviy nazorat'
     ],
     practiceDuration: '1 oy — Amaliyot',
     practicePoints: [
@@ -129,7 +129,7 @@ export const americanCourses: CourseDetail[] = [
     theoryDuration: '2 hafta — Intensiv nazariya',
     theoryTopics: [
       'Dispatching asoslari va tezkor yuk bron qilish',
-      'Fleet Management va tezkor haydovchilar koordinatsiyasi',
+      'Fleet Management va texnik nosozlikni bartaraf etish',
       'Safety talablari va shoshilinch vaziyatlar boshqaruvi',
       'Accounting: Birlamchi logistika moliyasi va hujjat aylanishi'
     ],

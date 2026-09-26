@@ -5,6 +5,7 @@ import { CourseType, LeadFormData } from '@/types';
 import { formatUzbekPhone, isValidUzbekPhone } from '@/lib/phoneMask';
 import { submitLead } from '@/lib/leadService';
 import { Button } from '@/components/ui/Button';
+import { SuccessModal } from '@/components/ui/SuccessModal';
 import { User, Phone, BookOpen, CheckCircle2, ShieldAlert, Sparkles, Send } from 'lucide-react';
 
 interface LeadFormProps {
@@ -26,6 +27,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // Synchronize when parent passes a new selected course
   useEffect(() => {
@@ -84,6 +86,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
       if (response.success) {
         setIsSuccess(true);
         setSuccessMessage(response.message);
+        setShowSuccessModal(true);
       }
     } catch (err) {
       console.error('Lead submission error:', err);
@@ -94,6 +97,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
 
   const handleReset = () => {
     setIsSuccess(false);
+    setShowSuccessModal(false);
     setFormData({
       name: '',
       phone: '+998 ',
@@ -104,6 +108,13 @@ export const LeadForm: React.FC<LeadFormProps> = ({
 
   return (
     <section id="ariza" className="py-20 sm:py-28 bg-slate-50/80 border-t border-slate-200/80 relative overflow-hidden">
+      {/* Success Modal Window after form submission */}
+      <SuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        message={successMessage}
+      />
+
       {/* Background Accent Gradients in Red */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -140,7 +151,10 @@ export const LeadForm: React.FC<LeadFormProps> = ({
                   {successMessage || 'Tez orada siz bilan bog‘lanamiz.'}
                 </p>
               </div>
-              <div className="pt-2">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                <Button variant="primary" size="md" onClick={() => setShowSuccessModal(true)}>
+                  Batafsil ma’lumot oynasini ochish
+                </Button>
                 <Button variant="outline" size="md" onClick={handleReset}>
                   Yana boshqa ariza yuborish
                 </Button>

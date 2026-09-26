@@ -97,11 +97,11 @@ export const Header: React.FC = () => {
           {/* Header Action Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+998915471025"
+              href="tel:+998776402530"
               className="flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-red-600 transition-colors py-1.5 px-3 rounded-full hover:bg-slate-100"
             >
               <Phone className="w-3.5 h-3.5 text-red-600" />
-              <span>+998 (91) 547-10-25</span>
+              <span>+998 (77) 640-25-30</span>
             </a>
             <a
               href="https://t.me/logimax12"
@@ -167,11 +167,11 @@ export const Header: React.FC = () => {
             {/* Mobile Contact Quick Actions */}
             <div className="pt-3 pb-2 space-y-2 border-b border-slate-100">
               <a
-                href="tel:+998915471025"
+                href="tel:+998776402530"
                 className="flex items-center gap-2.5 py-1.5 text-sm font-bold text-slate-800"
               >
                 <Phone className="w-4 h-4 text-red-600" />
-                <span>+998 (91) 547-10-25</span>
+                <span>+998 (77) 640-25-30</span>
               </a>
               <a
                 href="https://t.me/logimax12"
